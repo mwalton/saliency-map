@@ -1,0 +1,85 @@
+Tsaliency_map
+v6
+r1
+cCheck dependencies
+cCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c00000000526825AA000000000000044C
+t1382557098
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000526825AA00000000000001DB
+t1382557098
+s475
+
+N/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o
+t2
+s0
+
+N/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp
+c0000000052B1EE400000000000000E09
+t1387392576
+s3593
+
+N/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp
+c0000000052B1E9A100000000000001EA
+t1387391393
+s490
+
+CBuild AST from /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp
+r0
+
+CBuild AST from /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese84edcf24f62b841^705ffbf24f62b841^---0#1#1#--18"Check dependencies36"68ED5740-53FE-498C-BD37-1125369B293D-
+
+CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s409096178.983149
+e409096179.750389
+r1
+xCompileC
+xBuild/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o
+x/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp
+d/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp224"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o saliency_map/linear_algebra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler57d1fbf24f62b841^611cc0f34f62b841^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp0000000000000000^3566"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o saliency_map/linear_algebra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map/saliency_map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -iquote/Applications/MATLAB_R2013a.app/extern/include -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/linear_algebra.cpp -o /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o36"9AC503DC-B599-468A-BF42-5E9E42881900-
+b6E9EE20A-3C6F-4D97-BA68-22FF6DB2CD13
+
+CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s409096178.982840
+e409096179.576114
+r0
+xCompileC
+xBuild/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o
+x/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp:12:
+oIn file included from /Applications/MATLAB_R2013a.app/extern/include/engine.h:44:
+o/Applications/MATLAB_R2013a.app/extern/include/matrix.h:294:10: error: 'tmwtypes.h' file not found with <angled> include; use "quotes" instead
+o#include <tmwtypes.h>
+o         ^~~~~~~~~~~~
+o         "tmwtypes.h"
+o1 error generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp204"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerf5bcfbf24f62b841^e57a93f34f62b841^-415"In file included from /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp:12:In file included from /Applications/MATLAB_R2013a.app/extern/include/engine.h:44:/Applications/MATLAB_R2013a.app/extern/include/matrix.h:294:10: error: 'tmwtypes.h' file not found with <angled> include; use "quotes" instead#include <tmwtypes.h>         ^~~~~~~~~~~~         "tmwtypes.h"1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@71"'tmwtypes.h' file not found with <angled> include; use "quotes" instead-409096179#18446744073709551615#0#2(2@104"In file included from /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp:12:-409096179#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@85"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp0000000000000000^11#9#11#9#181#0#21"Apple LLVM 5.0 Notice--2@81"In file included from /Applications/MATLAB_R2013a.app/extern/include/engine.h:44:-409096179#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@62"file:///Applications/MATLAB_R2013a.app/extern/include/engine.h0000000000000000^43#9#43#9#789#0#21"Apple LLVM 5.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@62"file:///Applications/MATLAB_R2013a.app/extern/include/matrix.h0000000000000000^293#9#293#9#5642#0#29"Lexical or Preprocessor Issue1(3@62"file:///Applications/MATLAB_R2013a.app/extern/include/matrix.h0000000000000000^293#9#293#21#5642#12#-0#0#1#-19%DVTDocumentLocation4@85"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp0000000000000000^3506"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map/saliency_map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -iquote/Applications/MATLAB_R2013a.app/extern/include -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp -o /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o36"0E893D88-0365-40E6-8325-D677783DF0C9-
+b6E9EE20A-3C6F-4D97-BA68-22FF6DB2CD13
+
+CLd /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Products/Debug/saliency_map normal x86_64
+r0
+
