@@ -25,7 +25,8 @@ private:
 public:
     //Constructors
     Matrix(vector< vector<double> >);
-    Matrix(unsigned long,unsigned long);
+    Matrix(unsigned long, unsigned long);
+    Matrix(unsigned long, unsigned long, double);
     Matrix(unsigned long);
     Matrix();
     //Matrix(const Matrix &);
@@ -34,7 +35,8 @@ public:
     //Mutators
     void set(unsigned long, unsigned long, double);
     void add(Matrix);
-    void add_submatrix(Matrix, unsigned long, unsigned long, double);
+    void scale(double);
+    void add_submatrix(Matrix, unsigned long, unsigned long, double weight = 1);
     void to_gaussian(double);
     void normalize();
     Matrix convolution(Matrix);

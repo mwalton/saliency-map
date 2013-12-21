@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4CD0EE7D-7676-4498-8A36-2354F2FDDCAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>saliency_map</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0DD69376-ABAB-4260-89D6-F996E0C0E0F2</key>
+		<string>https://github.com/mwalton/saliency-map.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>saliency_map.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0DD69376-ABAB-4260-89D6-F996E0C0E0F2</key>
+		<string>../..</string>
+		<key>8D0CAB41-DAA8-410E-8AE6-01AB2C8D0C7B</key>
+		<string>../../saliency_map</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mwalton/saliency-map.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0DD69376-ABAB-4260-89D6-F996E0C0E0F2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8D0CAB41-DAA8-410E-8AE6-01AB2C8D0C7B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>saliency_map</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0DD69376-ABAB-4260-89D6-F996E0C0E0F2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>saliency-map</string>
+		</dict>
+	</array>
+</dict>
+</plist>

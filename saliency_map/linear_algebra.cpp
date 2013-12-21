@@ -20,6 +20,11 @@ Matrix::Matrix(unsigned long m,unsigned long n)
     elements.resize( n_columns , vector<double>( m_rows , 0 ) );
 }
 
+Matrix::Matrix(unsigned long m,unsigned long n, double initial_val)
+:m_rows(m), n_columns(n) {
+    elements.resize( n_columns , vector<double>( m_rows , initial_val ) );
+}
+
 Matrix::Matrix(unsigned long n)
 :m_rows(n), n_columns(n) {
     elements.resize(n_columns, vector<double> (m_rows, 0));
@@ -109,18 +114,24 @@ void Matrix::add(Matrix m) {
     }
 }
 
+void Matrix::scale(double scalar) {
+    for (int x = 0; x < n_columns; ++x) for (int y = 0; y < m_rows; ++y) {
+        elements[x][y] *= scalar;
+    }
+}
+
 /* NOTE: target is the upper left corner
  figure out centering issue
  add asserstions to prevent submatrix flowing over the edge of self
 */
 void Matrix::add_submatrix(Matrix m, unsigned long x_target,
-                           unsigned long y_target, double scalar = 1) {
+                           unsigned long y_target, double weight) {
     unsigned long sub_n = m.get_n_columns();
     unsigned long sub_m = m.get_m_rows();
     
     for (int x = 0; x < sub_n; ++x) for (int y = 0; y < sub_m; ++y) {
         if (x + x_target >= n_columns || y + y_target >= m_rows) continue;
-        elements[x + x_target - 1][y + y_target - 1] += scalar * m.get(x,y);
+        elements[x + x_target - 1][y + y_target - 1] += weight * m.get(x,y);
     }
 }
 
