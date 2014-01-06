@@ -20,13 +20,14 @@ int main(int argc, const char * argv[])
     
     //Make the base map
     Matrix saliency_map = Matrix(50,50);
+    saliency_map.to_gaussian(7);
     
     //Make the feature map
     Matrix feature_map = Matrix(50, 50);
     
     //Generate fovea
     Matrix fovea = Matrix(14);
-    fovea.to_gaussian(2);  //represent overt attention/foveal topography
+    fovea.to_gaussian(2.7);  //represent overt attention/foveal topography
     
     //generate an arbitrary matrix to represent a square stimulus cue
     Matrix stim_cue = Matrix(7,7,1);
@@ -36,17 +37,19 @@ int main(int argc, const char * argv[])
     feature_map.add_submatrix(stim_cue, 30, 2);
     feature_map.add_submatrix(stim_cue, 15, 15);
     
-    feature_map.normalize();
+    
     
     //add the foveal overt attention bias to the map
-    saliency_map.add_submatrix(fovea, 18, 18);
-    saliency_map.add(feature_map);
+    //saliency_map.add_submatrix(fovea, 18, 18);
+    
     
     //make a gaussian kernel
     Matrix gauss_kernel = Matrix(3,3);
     gauss_kernel.to_gaussian(5);
     
     //do gaussian blur convolution
+    feature_map.scale(.1);
+    saliency_map.add(feature_map);
     Matrix blurred_map = saliency_map.convolution(gauss_kernel);
     blurred_map.normalize();
     
@@ -60,8 +63,8 @@ int main(int argc, const char * argv[])
     right.scale(-1);
     left.add(right);
     
-    std::cout << left.to_string() << std::endl;
-    matlab_file << left.to_string();
+    std::cout << blurred_map.to_string() << std::endl;
+    matlab_file << blurred_map.to_string();
     matlab_file.close();
     
     return 0;
