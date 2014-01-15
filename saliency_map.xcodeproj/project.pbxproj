@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06815E88188715DF00209B29 /* saliency_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06815E86188715DF00209B29 /* saliency_map.cpp */; };
 		06B89E851862537200FAB633 /* linear_algebra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B89E841862537200FAB633 /* linear_algebra.cpp */; };
 		06C28566185E95B500541F81 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C28565185E95B500541F81 /* main.cpp */; };
 		06C28568185E95B500541F81 /* saliency_map.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 06C28567185E95B500541F81 /* saliency_map.1 */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06815E86188715DF00209B29 /* saliency_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = saliency_map.cpp; sourceTree = "<group>"; };
+		06815E87188715DF00209B29 /* saliency_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saliency_map.h; sourceTree = "<group>"; };
 		06B89E831862537200FAB633 /* linear_algebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linear_algebra.h; sourceTree = "<group>"; };
 		06B89E841862537200FAB633 /* linear_algebra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = linear_algebra.cpp; sourceTree = "<group>"; };
 		06C28562185E95B500541F81 /* saliency_map */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = saliency_map; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				06B89E831862537200FAB633 /* linear_algebra.h */,
+				06815E86188715DF00209B29 /* saliency_map.cpp */,
+				06815E87188715DF00209B29 /* saliency_map.h */,
 				06B89E841862537200FAB633 /* linear_algebra.cpp */,
 				06C28565185E95B500541F81 /* main.cpp */,
 				06C28567185E95B500541F81 /* saliency_map.1 */,
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06C28566185E95B500541F81 /* main.cpp in Sources */,
+				06815E88188715DF00209B29 /* saliency_map.cpp in Sources */,
 				06B89E851862537200FAB633 /* linear_algebra.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

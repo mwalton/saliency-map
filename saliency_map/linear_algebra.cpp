@@ -101,6 +101,12 @@ Matrix& Matrix::operator = (Matrix A)
 }
 */
 
+void Matrix::resize(unsigned long m, unsigned long n, double initial_value) {
+    m_rows = m;
+    n_columns = n;
+    elements.resize( n_columns , vector<double>( m_rows , initial_value ) );
+}
+
 void Matrix::set(unsigned long x, unsigned long y, double val) {
     elements[x][y] = val;
 }
@@ -177,6 +183,25 @@ void Matrix::to_gaussian(double sigma) {
     }
     normalize(sum);
 }
+
+void Matrix::rectify_beyond_eccentricity(double eccentricity, double value) {
+    for (int x = 0; x < n_columns; ++x) for (int y = 0; y < m_rows; ++y) {
+        if (approximate_eccentricity(x, y) > eccentricity) {
+            elements[x][y] = value;
+        }
+    }
+}
+
+double Matrix::approximate_eccentricity(unsigned long x, unsigned long y) {
+    double mean_x = get_n_columns() / 2;
+    double mean_y = get_m_rows() / 2;
+    
+    double x_dist_squared = (mean_x - x) * (mean_x - x);
+    double y_dist_squared = (mean_y - y) * (mean_y - y);
+    
+    return sqrt( x_dist_squared + y_dist_squared );
+    
+}
 //------------------------------------------------------------------
 // Accessors
 //------------------------------------------------------------------
@@ -234,7 +259,8 @@ std::string Matrix::to_string() {
     for (int i=0; i < m_rows; i++){
         for (int j=0; j < n_columns; j++){
             std::cout.width(10);
-            result << std::setprecision(10) << elements[i][j] << " ";
+            if (j != 0) result << ",";
+            result << std::setprecision(10) << elements[i][j];
         }
         result << std::endl;
     }

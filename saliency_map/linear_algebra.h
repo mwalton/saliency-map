@@ -33,12 +33,14 @@ public:
     //~Matrix();
     
     //Mutators
+    void resize(unsigned long, unsigned long, double initial_value = 0);
     void set(unsigned long, unsigned long, double);
     void add(Matrix);
     void scale(double);
     void add_submatrix(Matrix, unsigned long, unsigned long, double weight = 1);
     void to_gaussian(double);
     void normalize();
+    void rectify_beyond_eccentricity(double,double);
     Matrix convolution(Matrix);
     
     //Accessors
@@ -46,6 +48,7 @@ public:
     unsigned long get_n_columns();
     double get(unsigned long,unsigned long);
     double sum();
+    double approximate_eccentricity(unsigned long,unsigned long);
 
     //void clean();
     

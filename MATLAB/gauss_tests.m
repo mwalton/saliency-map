@@ -1,4 +1,4 @@
-A = load('../Build/saliency_map/Build/Products/Debug/mat_test.txt')
+A = csvread('../Build/saliency_map/Build/Products/Debug/map_test.csv')
 
 %{
 1. Gernrate map w/ normal distribution (across fovea & parafovea)
