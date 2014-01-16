@@ -40,7 +40,6 @@ public:
     void add_submatrix(Matrix, unsigned long, unsigned long, double weight = 1);
     void to_gaussian(double);
     void normalize();
-    void rectify_beyond_eccentricity(double,double);
     Matrix convolution(Matrix);
     
     //Accessors

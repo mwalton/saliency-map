@@ -45,13 +45,15 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     fovea.to_gaussian(fovea_sigma);
     parafovea.to_gaussian(parafovea_sigma);
     
+    //CHANGE ADD FUNCITONS TO INCLUDE SCALING
+    //LINEAR COMBINATION INSTEAD OF BASIC ADDITION
+    //WILL BE MORE EFFICIENT & CLEANER
     fovea.scale(.001);
     parafovea.scale(.05);
     
     add(fovea);
     add(parafovea);
     normalize();
-    //rectify_beyond_eccentricity(get_m_rows()/2,0);
 }
 
 
