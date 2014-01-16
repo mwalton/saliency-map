@@ -1,4 +1,4 @@
 saliency-map
 ============
 
-Base classes for a covert visual attention system in EPIC
+Base data structures for a covert visual attention system in EPIC
