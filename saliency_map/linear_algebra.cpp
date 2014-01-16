@@ -111,12 +111,12 @@ void Matrix::set(unsigned long x, unsigned long y, double val) {
     elements[x][y] = val;
 }
 
-void Matrix::add(Matrix m) {
+void Matrix::linear_combination(Matrix m, double scalar) {
     assert(m.get_m_rows() == get_m_rows());
     assert(m.get_n_columns() == get_n_columns());
     
     for (int x = 0; x < n_columns; ++x) for (int y = 0; y < m_rows; ++y) {
-        elements[x][y] += m.get(x, y);
+        elements[x][y] += scalar * m.get(x, y);
     }
 }
 

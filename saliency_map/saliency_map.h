@@ -16,6 +16,9 @@
 class Saliency_map: public Matrix {
 private:
     double angular_resolution;
+    const double FWHM_constant = 2.355;
+    const double fovea_scalar = .001;
+    const double parafovea_scalar = .05;
     
 public:
     //Constructors

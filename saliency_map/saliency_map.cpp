@@ -15,10 +15,10 @@
  n = 2 * periphery_VA / angular_resolution
  */
 
-Saliency_map::Saliency_map(double ar, double periphery_VA)
+Saliency_map::Saliency_map(double _angular_resolution, double max_eccentricity)
     : Matrix() {
-        angular_resolution = ar;
-        int n = 2 * periphery_VA / angular_resolution;
+        angular_resolution = _angular_resolution;
+        int n = 2 * max_eccentricity / angular_resolution;
         resize(n,n,1);
         normalize();
 }
@@ -29,30 +29,22 @@ Saliency_map::Saliency_map(double ar, double periphery_VA)
  FWHM (full width at half maximum) is used to compute appropriate sigmas
  for the width of the fovea, parafovea and periphery
  
- three gaussians are generated and summed to create the retinal map
+ three gaussians are generated and combined to create the retinal map
  */
 void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
-    double FWHM_constant = 2.355;
     double periphery_sigma = FWHM_constant * perif;
     double fovea_sigma = FWHM_constant * fv;
     double parafovea_sigma = FWHM_constant * paraF;
     
+    Saliency_map fovea = Saliency_map(angular_resolution);
+    Saliency_map parafovea = Saliency_map(angular_resolution);
+    
     to_gaussian(periphery_sigma);
-    
-    Saliency_map fovea = Saliency_map(get_angular_resolution());
-    Saliency_map parafovea = Saliency_map(get_angular_resolution());
-    
     fovea.to_gaussian(fovea_sigma);
     parafovea.to_gaussian(parafovea_sigma);
     
-    //CHANGE ADD FUNCITONS TO INCLUDE SCALING
-    //LINEAR COMBINATION INSTEAD OF BASIC ADDITION
-    //WILL BE MORE EFFICIENT & CLEANER
-    fovea.scale(.001);
-    parafovea.scale(.05);
-    
-    add(fovea);
-    add(parafovea);
+    linear_combination(fovea, fovea_scalar);
+    linear_combination(parafovea, parafovea_scalar);
     normalize();
 }
 

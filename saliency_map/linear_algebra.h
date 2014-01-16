@@ -35,7 +35,7 @@ public:
     //Mutators
     void resize(unsigned long, unsigned long, double initial_value = 0);
     void set(unsigned long, unsigned long, double);
-    void add(Matrix);
+    void linear_combination(Matrix, double);
     void scale(double);
     void add_submatrix(Matrix, unsigned long, unsigned long, double weight = 1);
     void to_gaussian(double);
