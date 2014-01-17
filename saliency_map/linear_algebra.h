@@ -37,10 +37,10 @@ public:
     void set(unsigned long, unsigned long, double);
     void linear_combination(Matrix, double);
     void scale(double);
-    void add_submatrix(Matrix, unsigned long, unsigned long, double weight = 1);
     void to_gaussian(double);
+    void to_gaussian(double, double, double);
     void normalize();
-    Matrix convolution(Matrix);
+    void convolution(Matrix);
     
     //Accessors
     unsigned long get_m_rows();

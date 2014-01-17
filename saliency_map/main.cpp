@@ -15,16 +15,34 @@
 int main(int argc, const char * argv[])
 {
     //Open file for output to matlab
-    std::ofstream matlab_file;
-    matlab_file.open("map_test.csv");
+    std::ofstream spatial_cue_file;
+    spatial_cue_file.open("spatial.csv");
+    
+    std::ofstream retina_file;
+    retina_file.open("retina.csv");
+    
+    std::ofstream sum_file;
+    sum_file.open("sum.csv");
     
     //Make the base map
-    Saliency_map retina = Saliency_map(1.0);
-    retina.retinal_distribution();
+    Saliency_map map = Saliency_map(1.0);
+    map.retinal_distribution();
     
+    //Make a feature map
+    Saliency_map feature_map = Saliency_map(1.0);
+    feature_map.insert_cue(1, 1, 10, 10);
+    feature_map.normalize();
     
-    matlab_file << retina.to_string();
-    matlab_file.close();
+    spatial_cue_file << feature_map.to_string();
+    retina_file << map.to_string();
+    
+    map.linear_combination(feature_map, 1);
+    map.normalize();
+    sum_file << map.to_string();
+    
+    spatial_cue_file.close();
+    retina_file.close();
+    sum_file.close();
     
     return 0;
 }

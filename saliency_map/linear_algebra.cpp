@@ -126,23 +126,7 @@ void Matrix::scale(double scalar) {
     }
 }
 
-/* NOTE: target is the upper left corner
- figure out centering issue
- add asserstions to prevent submatrix flowing over the edge of self
-*/
-void Matrix::add_submatrix(Matrix m, unsigned long x_target,
-                           unsigned long y_target, double weight) {
-    unsigned long sub_n = m.get_n_columns();
-    unsigned long sub_m = m.get_m_rows();
-    
-    for (int x = 0; x < sub_n; ++x) for (int y = 0; y < sub_m; ++y) {
-        if (x + x_target >= n_columns || y + y_target >= m_rows) continue;
-        elements[x + x_target - 1][y + y_target - 1] += weight * m.get(x,y);
-    }
-}
-
-//NOTE: Only works for 3x3 kernels, make scalable
-Matrix Matrix::convolution(Matrix kernel) {
+void Matrix::convolution(Matrix kernel) {
     double sum;
     Matrix tmp = Matrix(get_m_rows(),get_n_columns());
     for(int y = 1; y < m_rows - 1; y++){
@@ -156,7 +140,7 @@ Matrix Matrix::convolution(Matrix kernel) {
             tmp.set(x, y, sum);
         }
     }
-    return tmp;
+    elements = tmp.elements;
 }
 
 void Matrix::normalize(double sum) {
@@ -178,6 +162,16 @@ void Matrix::to_gaussian(double sigma) {
     double sum = 0;
     for (int x = 0; x < n_columns; ++x) for (int y = 0; y < m_rows; ++y) {
         elements[x][y] = exp( -0.5 * (pow((x-mean)/sigma, 2.0) + pow((y-mean)/sigma,2.0)) )
+        / (2 * M_PI * sigma * sigma);
+        sum += elements[x][y];
+    }
+    normalize(sum);
+}
+
+void Matrix::to_gaussian(double sigma, double x_mean, double y_mean) {
+    double sum = 0;
+    for (int x = 0; x < n_columns; ++x) for (int y = 0; y < m_rows; ++y) {
+        elements[x][y] = exp( -0.5 * (pow((x-x_mean)/sigma, 2.0) + pow((y-y_mean)/sigma,2.0)) )
         / (2 * M_PI * sigma * sigma);
         sum += elements[x][y];
     }

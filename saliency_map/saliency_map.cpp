@@ -15,8 +15,9 @@
  n = 2 * periphery_VA / angular_resolution
  */
 
-Saliency_map::Saliency_map(double _angular_resolution, double max_eccentricity)
+Saliency_map::Saliency_map(double _angular_resolution, double _weight, double max_eccentricity)
     : Matrix() {
+        full_width_half_max = _weight;
         angular_resolution = _angular_resolution;
         int n = 2 * max_eccentricity / angular_resolution;
         resize(n,n,1);
@@ -43,14 +44,21 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     fovea.to_gaussian(fovea_sigma);
     parafovea.to_gaussian(parafovea_sigma);
     
-    linear_combination(fovea, fovea_scalar);
-    linear_combination(parafovea, parafovea_scalar);
+    scale(120);
+    linear_combination(fovea, 1);
+    linear_combination(parafovea, 56.25);
     normalize();
 }
 
-
-
-
+void Saliency_map::insert_cue( double size, double intensity, unsigned long x, unsigned long y ) {
+    Saliency_map cue = Saliency_map(angular_resolution);
+    double cue_sigma = FWHM_constant * size;
+    double scaled_intensity = intensity * size;
+    
+    cue.to_gaussian(cue_sigma, x, y);
+    
+    linear_combination(cue, scaled_intensity);
+}
 
 //Accessors
 double Saliency_map::get_angular_resolution() {
