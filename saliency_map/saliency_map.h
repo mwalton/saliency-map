@@ -27,7 +27,8 @@ public:
     
     //Mutators
     void retinal_distribution(double fovea = 1.0, double paraF = 7.5, double perif = 60);
-    void insert_cue(double, double, unsigned long, unsigned long);
+    void insert_gaussian_cue(double, double, unsigned long, unsigned long);
+    void insert_rect_cue(unsigned long, unsigned long, double, unsigned long, unsigned long);
     
     //Accessors
     double get_angular_resolution();

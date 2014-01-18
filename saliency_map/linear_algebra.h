@@ -20,8 +20,6 @@ private:
     unsigned long n_columns;
     vector< vector<double> > elements;
     
-    void normalize(double);
-    
 public:
     //Constructors
     Matrix(vector< vector<double> >);
@@ -40,6 +38,7 @@ public:
     void to_gaussian(double);
     void to_gaussian(double, double, double);
     void normalize();
+    void normalize(double);
     void convolution(Matrix);
     
     //Accessors

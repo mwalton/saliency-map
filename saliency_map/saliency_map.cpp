@@ -50,7 +50,7 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     normalize();
 }
 
-void Saliency_map::insert_cue( double size, double intensity, unsigned long x, unsigned long y ) {
+void Saliency_map::insert_gaussian_cue( double size, double intensity, unsigned long x, unsigned long y ) {
     Saliency_map cue = Saliency_map(angular_resolution);
     double cue_sigma = FWHM_constant * size;
     double scaled_intensity = intensity * size;
@@ -58,6 +58,30 @@ void Saliency_map::insert_cue( double size, double intensity, unsigned long x, u
     cue.to_gaussian(cue_sigma, x, y);
     
     linear_combination(cue, scaled_intensity);
+}
+
+void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double intensity, unsigned long x, unsigned long y) {
+    Saliency_map cue = Saliency_map(angular_resolution);
+    
+    unsigned long x_max = w + x;
+    unsigned long y_max = h+y;
+    unsigned long sum = w * h;
+    
+    if (x_max > get_n_columns()) x_max = get_n_columns();
+    if (y_max > get_m_rows()) y_max = get_m_rows();
+    
+    for (unsigned long x_i = x; x_i < w; ++x_i) for (unsigned long y_i = y; y_i < y_max; ++y_i) {
+        set(x_i, y_i, get(x_i,y_i) + .01);
+    }
+    
+    Matrix gauss_kernel = Matrix(3,3);
+    gauss_kernel.to_gaussian(1);
+    
+    cue.normalize(sum);
+    cue.convolution(gauss_kernel);
+    
+    linear_combination(cue, intensity);
+
 }
 
 //Accessors

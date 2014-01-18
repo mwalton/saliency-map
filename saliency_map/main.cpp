@@ -30,7 +30,8 @@ int main(int argc, const char * argv[])
     
     //Make a feature map
     Saliency_map feature_map = Saliency_map(1.0);
-    feature_map.insert_cue(1, 1, 10, 10);
+    //feature_map.insert_gaussian_cue(1, 1, 10, 10);
+    feature_map.insert_rect_cue(60, 60, 1, 0, 0);
     feature_map.normalize();
     
     spatial_cue_file << feature_map.to_string();
