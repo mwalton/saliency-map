@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 myke. All rights reserved.
 //
 
+#define _USE_MATH_DEFINES
+
 #include "saliency_map.h"
 #include <math.h>
 
@@ -44,9 +46,13 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     fovea.to_gaussian(fovea_sigma);
     parafovea.to_gaussian(parafovea_sigma);
     
-    scale(120);
-    linear_combination(fovea, 1);
-    linear_combination(parafovea, 56.25);
+    set_volume(periphery_sigma);
+    fovea.set_volume(fovea_sigma);
+    parafovea.set_volume(parafovea_sigma);
+    
+    scale(volume);
+    linear_combination(fovea, fovea.get_volume());
+    linear_combination(parafovea, parafovea.get_volume());
     normalize();
 }
 
@@ -81,10 +87,17 @@ void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double inte
     cue.convolution(gauss_kernel);
     
     linear_combination(cue, intensity);
+}
 
+void Saliency_map::set_volume(double sigma) {
+    volume = 2 * M_PI * sigma;
 }
 
 //Accessors
 double Saliency_map::get_angular_resolution() {
     return angular_resolution;
+}
+
+double Saliency_map::get_volume() {
+    return volume;
 }

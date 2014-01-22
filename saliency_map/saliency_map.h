@@ -17,9 +17,8 @@ class Saliency_map: public Matrix {
 private:
     double angular_resolution;
     double full_width_half_max;
+    double volume;
     const double FWHM_constant = 2.355;
-    const double fovea_scalar = .001;
-    const double parafovea_scalar = .05;
     
 public:
     //Constructors
@@ -29,9 +28,11 @@ public:
     void retinal_distribution(double fovea = 1.0, double paraF = 7.5, double perif = 60);
     void insert_gaussian_cue(double, double, unsigned long, unsigned long);
     void insert_rect_cue(unsigned long, unsigned long, double, unsigned long, unsigned long);
+    void set_volume(double);
     
     //Accessors
     double get_angular_resolution();
+    double get_volume();
 };
 
 #endif /* defined(__saliency_map__saliency_map__) */
