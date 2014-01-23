@@ -23,3 +23,9 @@ figure
 surf(S)
 axis vis3d %lock aspect ratio
 colorbar
+
+%{
+colormap('jet')
+imagesc(S)
+colorbar
+%}

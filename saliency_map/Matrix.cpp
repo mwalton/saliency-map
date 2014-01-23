@@ -103,7 +103,7 @@ void Matrix::to_gaussian(int x_mean, int y_mean, double sigma) {
         / (2 * M_PI * sigma * sigma);
         sum += elements[x][y];
     }
-    normalize(sum);
+    //normalize(sum);
 }
 /*
 double Matrix::approximate_eccentricity(unsigned long x, unsigned long y) {

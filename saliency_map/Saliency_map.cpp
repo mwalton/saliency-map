@@ -56,17 +56,17 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     linear_combination(parafovea, paraF_A);
     linear_combination(periphery, perif_A);
     
-    normalize();
+    //normalize();
 }
 
-void Saliency_map::insert_gaussian_cue( double size, int x_mean, int y_mean ) {
+void Saliency_map::insert_gaussian_cue( double size, double intensity, int x_mean, int y_mean ) {
     double cue_sigma = FWHM_constant * size;
     double cue_area = M_PI * (size / 2) * (size / 2);
     
     Saliency_map cue_map = Saliency_map(angular_resolution, periphery_DVA);
     cue_map.to_gaussian(x_mean, y_mean, cue_sigma);
     
-    linear_combination(cue_map, cue_area);
+    linear_combination(cue_map, cue_area * intensity);
 }
 /*
 void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double intensity, unsigned long x, unsigned long y) {
@@ -102,11 +102,11 @@ void Saliency_map::set_volume(double sigma) {
 double Saliency_map::get_angular_resolution() {
     return angular_resolution;
 }
-
+/*
 int Saliency_map::get_n_cues() {
     return n_cues;
 }
-
+*/
 /*
 double Saliency_map::get_volume() {
     return volume;

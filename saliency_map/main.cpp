@@ -27,18 +27,19 @@ int main(int argc, const char * argv[])
     //Make the base map
     Saliency_map map = Saliency_map(1.0);
     map.retinal_distribution();
+    map.normalize();
     
     //Make a feature map
     Saliency_map feature_map = Saliency_map(1.0);
-    feature_map.insert_gaussian_cue(5, 5, 5);
-    feature_map.insert_gaussian_cue(5, 100, 100);
-    feature_map.insert_gaussian_cue(5, 5, 100);
+    feature_map.insert_gaussian_cue(2, 3.4, 5, 5);
+    feature_map.insert_gaussian_cue(2, 2.1, 100, 100);
+    feature_map.insert_gaussian_cue(7, 1.5, 5, 100);
     feature_map.normalize();
     
     spatial_cue_file << feature_map.to_string();
     retina_file << map.to_string();
     
-    map.linear_combination(feature_map, 1);
+    map.linear_combination(feature_map, .1);
     map.normalize();
     sum_file << map.to_string();
     

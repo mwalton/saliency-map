@@ -363,12 +363,12 @@ t1382557113
 s5968
 
 N/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o
-t1390449149
-s276988
+t1390453951
+s276964
 
 N/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o
-t1390448730
-s108028
+t1390454273
+s108004
 
 N/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o
 c0000000052E04B850000000000045D6C
@@ -376,8 +376,8 @@ t1390431109
 s286060
 
 N/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o
-t1390449240
-s209860
+t1390455803
+s209980
 
 N/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/saliency_map.LinkFileList
 c0000000052E0603400000000000001DE
@@ -390,7 +390,7 @@ t1390436405
 s80464
 
 N/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map
-t1390449219
+t1390455780
 s114264
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o
@@ -411,9 +411,9 @@ t1387540577
 s102808
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp
-c0000000052E091E0000000000000101A
-t1390449120
-s4122
+c0000000052E0A4B9000000000000101C
+t1390453945
+s4124
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.h
 c0000000052E08E870000000000000478
@@ -421,14 +421,14 @@ t1390448263
 s1144
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp
-c0000000052E090150000000000000CDC
-t1390448661
-s3292
+c0000000052E0A5D60000000000000CFC
+t1390454230
+s3324
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.h
-c0000000052E08655000000000000039F
-t1390446165
-s927
+c0000000052E0A5B500000000000003B1
+t1390454197
+s945
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/linear_algebra.cpp
 c0000000052E04B360000000000001820
@@ -441,9 +441,9 @@ t2
 s0
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp
-c0000000052E0925600000000000009AA
-t1390449238
-s2474
+c0000000052E0ABF900000000000009CF
+t1390455801
+s2511
 
 N/Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map.cpp
 c0000000052E04C450000000000000BA3
@@ -493,11 +493,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies7a6cdbd7c990b841^3ae7dbd7c990b841^---0#1#1#--18"Check dependencies36"3893CBBC-BAF4-4EE6-A198-49EEAD9F68BF-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies7fd9957ae390b841^4148967ae390b841^---0#1#1#--18"Check dependencies36"802E47A9-EDBB-48C6-9108-03E2471EE2D0-
 
 CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o /Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s412141948.501389
-e412141949.621194
+s412146750.445152
+e412146751.130437
 r1
 xCompileC
 xBuild/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o
@@ -508,12 +508,12 @@ xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp208"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o saliency_map/Matrix.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler6474807cc990b841^d5069f7dc990b841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp0000000000000000^3243"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o saliency_map/Matrix.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o36"9EDCF004-174D-489E-8F32-05B613F8182E-
-bA4A0F123-935B-4DB1-B28E-20C6221AB52B
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp208"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o saliency_map/Matrix.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler310a723edc90b841^b668213fdc90b841^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp0000000000000000^3243"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o saliency_map/Matrix.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.cpp -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Matrix.o36"8EADD402-9C05-4404-AFEF-8833B01DC158-
+b232DCC9B-381B-42FC-A2CC-19B39926DB4C
 
 CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o /Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s412141529.569618
-e412141530.648900
+s412147073.059695
+e412147073.745651
 r1
 xCompileC
 xBuild/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o
@@ -525,8 +525,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.h
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp220"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o saliency_map/Saliency_map.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler121592d9c790b841^3315a6dac790b841^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp0000000000000000^3279"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o saliency_map/Saliency_map.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o36"863EB394-CB37-4A07-B346-CC80EE7F983D-
-b5ECAB2A3-2F66-4EFA-AE8E-BA1079E92CC0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp220"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o saliency_map/Saliency_map.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerc0770f81dd90b841^c5e3be81dd90b841^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp0000000000000000^3279"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o saliency_map/Saliency_map.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.cpp -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/Saliency_map.o36"496D2BF7-17A4-4A64-9F24-04D9152CE47D-
+bD363E5A1-1785-4763-BA77-ED792EC8C645
 
 CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/linear_algebra.o /Users/michaelwalton/workspace/saliency-map/saliency_map/linear_algebra.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s412123908.563310
@@ -561,8 +561,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile
 b4FD416B1-A1FF-4880-A32F-7138F8074F6D
 
 CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o /Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s412142039.858494
-e412142040.488366
+s412148602.586694
+e412148603.406389
 r1
 xCompileC
 xBuild/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o
@@ -574,8 +574,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Matrix.h
 d/Users/michaelwalton/workspace/saliency-map/saliency_map/Saliency_map.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp204"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler35f0dbd7c990b841^64077dd8c990b841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp0000000000000000^3231"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o36"7527781A-C4F3-4772-8887-45308F291700-
-bFB0CF24F-B88F-407A-9B61-93371A55C361
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp204"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler8258967ae390b841^6c0a687be390b841^---0#0#1#-19%DVTDocumentLocation2@72"file:///Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp0000000000000000^3231"CompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/michaelwalton/workspace/saliency-map    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-generated-files.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-own-target-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-all-target-headers.hmap -iquote /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/saliency_map-project-headers.hmap -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources/x86_64 -I/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/DerivedSources -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -MMD -MT dependencies -MF /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.dia -c /Users/michaelwalton/workspace/saliency-map/saliency_map/main.cpp -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o36"40D0FB04-DC32-458B-912F-FBB1E16EB72F-
+b85162253-D0D9-4273-BFE4-7066779700D0
 
 CCompileC Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/main.o /Users/michaelwalton/workspace/saliency-map/saliency_map/saliency_map/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s409233414.270064
@@ -611,8 +611,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile
 bED6062FC-F3A0-410A-8F02-F79B24013551
 
 CLd /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map normal x86_64
-s412142040.489834
-e412142040.513008
+s412148603.407905
+e412148603.439630
 r1
 xLd
 x/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map
@@ -655,8 +655,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map69"Ld Build/saliency_map/Build/Products/Debug/saliency_map normal x86_649b767dd8c990b841^695583d8c990b841^---0#0#1#--1098"Ld Build/saliency_map/Build/Products/Debug/saliency_map normal x86_64    cd /Users/michaelwalton/workspace/saliency-map    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -filelist /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/saliency_map.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/saliency_map_dependency_info.dat -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map36"B0E5662B-CA52-4862-A25C-9C763575D19A-
-bFB0CF24F-B88F-407A-9B61-93371A55C361
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Link /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map69"Ld Build/saliency_map/Build/Products/Debug/saliency_map normal x86_643a7a687be390b841^a48c707be390b841^---0#0#1#--1098"Ld Build/saliency_map/Build/Products/Debug/saliency_map normal x86_64    cd /Users/michaelwalton/workspace/saliency-map    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -F/Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug -filelist /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/saliency_map.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Intermediates/saliency_map.build/Debug/saliency_map.build/Objects-normal/x86_64/saliency_map_dependency_info.dat -o /Users/michaelwalton/workspace/saliency-map/Build/saliency_map/Build/Products/Debug/saliency_map36"C176F486-DE8A-47AA-B880-CB95F77EA9A2-
+b85162253-D0D9-4273-BFE4-7066779700D0
 
 CLd /Users/michaelwalton/workspace/saliency-map/saliency_map/Build/saliency_map/Build/Products/Debug/saliency_map normal x86_64
 s409233415.048149

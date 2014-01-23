@@ -11,6 +11,7 @@
 		06B89E851862537200FAB633 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B89E841862537200FAB633 /* Matrix.cpp */; };
 		06C28566185E95B500541F81 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C28565185E95B500541F81 /* main.cpp */; };
 		06C28568185E95B500541F81 /* saliency_map.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 06C28567185E95B500541F81 /* saliency_map.1 */; };
+		06E47B201890E5810002A8AC /* Visual_attention_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E47B1E1890E5810002A8AC /* Visual_attention_processor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		06C28562185E95B500541F81 /* saliency_map */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = saliency_map; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C28565185E95B500541F81 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		06C28567185E95B500541F81 /* saliency_map.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = saliency_map.1; sourceTree = "<group>"; };
+		06E47B1E1890E5810002A8AC /* Visual_attention_processor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Visual_attention_processor.cpp; sourceTree = "<group>"; };
+		06E47B1F1890E5810002A8AC /* Visual_attention_processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visual_attention_processor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				06B89E831862537200FAB633 /* Matrix.h */,
 				06B89E841862537200FAB633 /* Matrix.cpp */,
 				06C28565185E95B500541F81 /* main.cpp */,
+				06E47B1E1890E5810002A8AC /* Visual_attention_processor.cpp */,
+				06E47B1F1890E5810002A8AC /* Visual_attention_processor.h */,
 				06C28567185E95B500541F81 /* saliency_map.1 */,
 			);
 			path = saliency_map;
@@ -130,6 +135,7 @@
 				06C28566185E95B500541F81 /* main.cpp in Sources */,
 				06815E88188715DF00209B29 /* Saliency_map.cpp in Sources */,
 				06B89E851862537200FAB633 /* Matrix.cpp in Sources */,
+				06E47B201890E5810002A8AC /* Visual_attention_processor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
