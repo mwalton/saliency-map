@@ -8,7 +8,7 @@
 
 #define _USE_MATH_DEFINES
 
-#include "saliency_map.h"
+#include "Saliency_map.h"
 #include <math.h>
 
 /*
@@ -17,13 +17,11 @@
  n = 2 * periphery_VA / angular_resolution
  */
 
-Saliency_map::Saliency_map(double _angular_resolution, double _weight, double max_eccentricity)
-    : Matrix() {
-        full_width_half_max = _weight;
-        angular_resolution = _angular_resolution;
-        int n = 2 * max_eccentricity / angular_resolution;
-        resize(n,n,1);
-        normalize();
+Saliency_map::Saliency_map(double _angular_resolution, double _periphery_DVA) : Matrix() {
+    angular_resolution = _angular_resolution;
+    periphery_DVA = _periphery_DVA;
+    size_t n = 2 * periphery_DVA / angular_resolution;
+    resize(n, n, 0);
 }
 
 //Mutators
@@ -39,33 +37,38 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     double fovea_sigma = FWHM_constant * fv;
     double parafovea_sigma = FWHM_constant * paraF;
     
-    Saliency_map fovea = Saliency_map(angular_resolution);
-    Saliency_map parafovea = Saliency_map(angular_resolution);
+    int x_mean = (int)get_width() / 2;
+    int y_mean = (int)get_height() / 2;
     
-    to_gaussian(periphery_sigma);
-    fovea.to_gaussian(fovea_sigma);
-    parafovea.to_gaussian(parafovea_sigma);
+    double fv_A = M_PI * fv * fv;
+    double paraF_A = M_PI * paraF * paraF;
+    double perif_A = M_PI * perif * perif;
     
-    set_volume(periphery_sigma);
-    fovea.set_volume(fovea_sigma);
-    parafovea.set_volume(parafovea_sigma);
+    Saliency_map fovea = Saliency_map(angular_resolution, periphery_DVA);
+    Saliency_map parafovea = Saliency_map(angular_resolution, periphery_DVA);
+    Saliency_map periphery = Saliency_map(angular_resolution, periphery_DVA);
     
-    scale(volume);
-    linear_combination(fovea, fovea.get_volume());
-    linear_combination(parafovea, parafovea.get_volume());
+    fovea.to_gaussian(x_mean, y_mean, fovea_sigma);
+    parafovea.to_gaussian(x_mean, y_mean, parafovea_sigma);
+    periphery.to_gaussian(x_mean, y_mean, periphery_sigma);
+    
+    linear_combination(fovea, fv_A);
+    linear_combination(parafovea, paraF_A);
+    linear_combination(periphery, perif_A);
+    
     normalize();
 }
 
-void Saliency_map::insert_gaussian_cue( double size, double intensity, unsigned long x, unsigned long y ) {
-    Saliency_map cue = Saliency_map(angular_resolution);
+void Saliency_map::insert_gaussian_cue( double size, int x_mean, int y_mean ) {
     double cue_sigma = FWHM_constant * size;
-    double scaled_intensity = intensity * size;
+    double cue_area = M_PI * (size / 2) * (size / 2);
     
-    cue.to_gaussian(cue_sigma, x, y);
+    Saliency_map cue_map = Saliency_map(angular_resolution, periphery_DVA);
+    cue_map.to_gaussian(x_mean, y_mean, cue_sigma);
     
-    linear_combination(cue, scaled_intensity);
+    linear_combination(cue_map, cue_area);
 }
-
+/*
 void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double intensity, unsigned long x, unsigned long y) {
     Saliency_map cue = Saliency_map(angular_resolution);
     
@@ -89,15 +92,23 @@ void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double inte
     linear_combination(cue, intensity);
 }
 
+
 void Saliency_map::set_volume(double sigma) {
     volume = 2 * M_PI * sigma;
 }
-
+*/
+ 
 //Accessors
 double Saliency_map::get_angular_resolution() {
     return angular_resolution;
 }
 
+int Saliency_map::get_n_cues() {
+    return n_cues;
+}
+
+/*
 double Saliency_map::get_volume() {
     return volume;
 }
+*/

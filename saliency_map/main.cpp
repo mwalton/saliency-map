@@ -9,8 +9,8 @@
 #include <iostream>
 #include <fstream>
 
-#include "linear_algebra.h"
-#include "saliency_map.h"
+#include "Matrix.h"
+#include "Saliency_map.h"
 
 int main(int argc, const char * argv[])
 {
@@ -25,13 +25,14 @@ int main(int argc, const char * argv[])
     sum_file.open("sum.csv");
     
     //Make the base map
-    Saliency_map map = Saliency_map(5.0);
+    Saliency_map map = Saliency_map(1.0);
     map.retinal_distribution();
     
     //Make a feature map
     Saliency_map feature_map = Saliency_map(1.0);
-    //feature_map.insert_gaussian_cue(1, 1, 10, 10);
-    feature_map.insert_gaussian_cue(2, 1, 0, 0);
+    feature_map.insert_gaussian_cue(5, 5, 5);
+    feature_map.insert_gaussian_cue(5, 100, 100);
+    feature_map.insert_gaussian_cue(5, 5, 100);
     feature_map.normalize();
     
     spatial_cue_file << feature_map.to_string();
