@@ -15,17 +15,20 @@
 
 class Saliency_map: public Matrix {
 private:
-    const double FWHM_constant = 2.355;
+    double FWHM_constant = 2.355;
     
     double angular_resolution;
-    double periphery_DVA;
+    double periphery_radius;
     
 public:
     //Constructors
-    Saliency_map(double _angular_resolution, double _periphery_DVA = 60);
+    Saliency_map();
+    Saliency_map(double _angular_resolution, double _periphery_DVA);
     
     //Mutators
     void retinal_distribution(double fovea = 1.0, double paraF = 7.5, double perif = 60);
+    void flat_distribution();
+    
     void insert_gaussian_cue(double size, double intensity, int x_mean, int y_mean);
     //void insert_rect_cue(unsigned long, unsigned long, double, unsigned long, unsigned long);
     void set_volume(double);

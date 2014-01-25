@@ -9,8 +9,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "Matrix.h"
-#include "Saliency_map.h"
+#include "Visual_attention_processor.h"
 
 int main(int argc, const char * argv[])
 {
@@ -25,23 +24,21 @@ int main(int argc, const char * argv[])
     sum_file.open("sum.csv");
     
     //Make the base map
-    Saliency_map map = Saliency_map(1.0);
-    map.retinal_distribution();
-    map.normalize();
+    Visual_attention_processor v_attn = Visual_attention_processor(1.0, 60);
     
-    //Make a feature map
-    Saliency_map feature_map = Saliency_map(1.0);
-    feature_map.insert_gaussian_cue(2, 3.4, 5, 5);
-    feature_map.insert_gaussian_cue(2, 2.1, 100, 100);
-    feature_map.insert_gaussian_cue(7, 1.5, 5, 100);
-    feature_map.normalize();
+    //insert features
+    Saliency_map * spatial_ptr = v_attn.endogenous_spatial_ptr();
     
-    spatial_cue_file << feature_map.to_string();
-    retina_file << map.to_string();
+    //spatial_ptr->insert_gaussian_cue(2, 2, 5, 5);
+    //spatial_ptr->insert_gaussian_cue(5, 2, 100, 100);
+    //spatial_ptr->insert_gaussian_cue(10, 2, 5, 100);
+    //spatial_ptr->normalize();
     
-    map.linear_combination(feature_map, .1);
-    map.normalize();
-    sum_file << map.to_string();
+    spatial_cue_file << spatial_ptr->to_string();
+    retina_file << v_attn.retinal_ptr() -> to_string();
+    
+    v_attn.generate_saliency_map(1, 1);
+    sum_file << v_attn.saliency_ptr() -> to_string();
     
     spatial_cue_file.close();
     retina_file.close();

@@ -17,10 +17,17 @@
  n = 2 * periphery_VA / angular_resolution
  */
 
-Saliency_map::Saliency_map(double _angular_resolution, double _periphery_DVA) : Matrix() {
+Saliency_map::Saliency_map() : Matrix() {
+    angular_resolution = 1;
+    periphery_radius = 60;
+    size_t n = 2 * periphery_radius / angular_resolution;
+    resize(n, n, 0);
+}
+
+Saliency_map::Saliency_map(double _angular_resolution, double _periphery_radius) : Matrix() {
     angular_resolution = _angular_resolution;
-    periphery_DVA = _periphery_DVA;
-    size_t n = 2 * periphery_DVA / angular_resolution;
+    periphery_radius = _periphery_radius;
+    size_t n = 2 * periphery_radius / angular_resolution;
     resize(n, n, 0);
 }
 
@@ -44,9 +51,9 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     double paraF_A = M_PI * paraF * paraF;
     double perif_A = M_PI * perif * perif;
     
-    Saliency_map fovea = Saliency_map(angular_resolution, periphery_DVA);
-    Saliency_map parafovea = Saliency_map(angular_resolution, periphery_DVA);
-    Saliency_map periphery = Saliency_map(angular_resolution, periphery_DVA);
+    Saliency_map fovea = Saliency_map(angular_resolution, periphery_radius);
+    Saliency_map parafovea = Saliency_map(angular_resolution, periphery_radius);
+    Saliency_map periphery = Saliency_map(angular_resolution, periphery_radius);
     
     fovea.to_gaussian(x_mean, y_mean, fovea_sigma);
     parafovea.to_gaussian(x_mean, y_mean, parafovea_sigma);
@@ -59,11 +66,18 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     //normalize();
 }
 
+void Saliency_map::flat_distribution() {
+    size_t n = 2 * periphery_radius / angular_resolution;
+    resize(n,n,1);
+    double sum = (double) n * n;
+    normalize(sum);
+}
+
 void Saliency_map::insert_gaussian_cue( double size, double intensity, int x_mean, int y_mean ) {
     double cue_sigma = FWHM_constant * size;
     double cue_area = M_PI * (size / 2) * (size / 2);
     
-    Saliency_map cue_map = Saliency_map(angular_resolution, periphery_DVA);
+    Saliency_map cue_map = Saliency_map(angular_resolution, periphery_radius);
     cue_map.to_gaussian(x_mean, y_mean, cue_sigma);
     
     linear_combination(cue_map, cue_area * intensity);
