@@ -29,15 +29,15 @@ int main(int argc, const char * argv[])
     //insert features
     Saliency_map * spatial_ptr = v_attn.endogenous_spatial_ptr();
     
-    //spatial_ptr->insert_gaussian_cue(2, 2, 5, 5);
-    //spatial_ptr->insert_gaussian_cue(5, 2, 100, 100);
-    //spatial_ptr->insert_gaussian_cue(10, 2, 5, 100);
-    //spatial_ptr->normalize();
+    spatial_ptr->insert_gaussian_cue(2, 2, 5, 5);
+    spatial_ptr->insert_gaussian_cue(5, 2, 100, 100);
+    spatial_ptr->insert_gaussian_cue(10, 2, 5, 100);
+    spatial_ptr->normalize();
     
     spatial_cue_file << spatial_ptr->to_string();
     retina_file << v_attn.retinal_ptr() -> to_string();
     
-    v_attn.generate_saliency_map(1, 1);
+    v_attn.generate_saliency_map(.005, 1);
     sum_file << v_attn.saliency_ptr() -> to_string();
     
     spatial_cue_file.close();

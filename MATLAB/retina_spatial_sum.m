@@ -1,6 +1,6 @@
-R = csvread('../Build/saliency_map/Build/Products/Debug/retina.csv')
-F = csvread('../Build/saliency_map/Build/Products/Debug/spatial.csv')
-S = csvread('../Build/saliency_map/Build/Products/Debug/sum.csv')
+R = csvread('../build/Debug/retina.csv')
+F = csvread('../build/Debug/spatial.csv')
+S = csvread('../build/Debug/sum.csv')
 
 
 %{
