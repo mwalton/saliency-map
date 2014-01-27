@@ -2,8 +2,8 @@
 //  linear_algebra.h
 //  saliency_map
 //
-//  Created by myke on 12/15/13.
-//  Copyright (c) 2013 myke. All rights reserved.
+//  Created by Michael Walton on 12/15/13.
+//  Copyright (c) 2013 Michael Walton. All rights reserved.
 //
 
 #ifndef MATRIX_H
@@ -36,14 +36,12 @@ public:
     void normalize();
     void normalize(double sum);
     void convolution(Matrix m);
-    void rectify_range(int x, int y, int range, double val);
     
     //Accessors
     unsigned long get_height();
     unsigned long get_width();
     double get_value(size_t x, size_t y);
     double sum();
-    double cartesian_distance(int x_1, int y_1, int x_2, int y_2);
     
     //void clean();
     

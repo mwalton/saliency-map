@@ -2,8 +2,8 @@
 //  Visual_attention_processor.h
 //  saliency_map
 //
-//  Created by myke on 1/22/14.
-//  Copyright (c) 2014 myke. All rights reserved.
+//  Created by Michael Walton on 1/22/14.
+//  Copyright (c) 2014 Michael Walton. All rights reserved.
 //
 
 #ifndef VISUAL_ATTENTION_PROCESSOR_H

@@ -2,8 +2,8 @@
 //  saliency_map.cpp
 //  saliency_map
 //
-//  Created by myke on 1/15/14.
-//  Copyright (c) 2014 myke. All rights reserved.
+//  Created by Michael Walton on 1/15/14.
+//  Copyright (c) 2014 Michael Walton. All rights reserved.
 //
 
 #define _USE_MATH_DEFINES

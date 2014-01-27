@@ -2,8 +2,8 @@
 //  main.cpp
 //  saliency_map
 //
-//  Created by myke on 12/15/13.
-//  Copyright (c) 2013 myke. All rights reserved.
+//  Created by Michael Walton on 12/15/13.
+//  Copyright (c) 2013 Michael Walton. All rights reserved.
 //
 
 #include <iostream>

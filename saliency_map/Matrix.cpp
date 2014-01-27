@@ -2,8 +2,8 @@
 //  linear_algebra.cpp
 //  saliency_map
 //
-//  Created by myke on 12/15/13.
-//  Copyright (c) 2013 myke. All rights reserved.
+//  Created by Michael Walton on 12/15/13.
+//  Copyright (c) 2013 Michael Walton. All rights reserved.
 //
 
 #include <iostream>
@@ -106,14 +106,6 @@ void Matrix::to_gaussian(int x_mean, int y_mean, double sigma) {
     //normalize(sum);
 }
 
-void Matrix::rectify_range(int x, int y, int range, double val) {
-    for (int x_i = 0; x_i < width; ++x_i) for (int y_i = 0; y_i < height; ++y_i) {
-        if (cartesian_distance(x_i, y_i, x, y) >= range) {
-            elements[x_i][y_i] = val;
-        }
-    }
-}
-
 //------------------------------------------------------------------
 // Accessors
 //------------------------------------------------------------------
@@ -136,14 +128,6 @@ double Matrix::sum() {
         sum += elements[x][y];
     }
     return sum;
-}
-
-double Matrix::cartesian_distance(int x_1, int y_1, int x_2, int y_2) {
-    double x_dist_squared = (x_1 - x_2) * (x_1 - x_2);
-    double y_dist_squared = (y_1 - y_2) * (y_1 - y_2);
-    
-    return sqrt( x_dist_squared + y_dist_squared );
-    
 }
 
 //------------------------------------------------------------------
