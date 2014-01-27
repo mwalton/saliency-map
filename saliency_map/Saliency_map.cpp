@@ -22,6 +22,8 @@ Saliency_map::Saliency_map() : Matrix() {
     periphery_radius = 60;
     size_t n = 2 * periphery_radius / angular_resolution;
     resize(n, n, 0);
+    center_x = (int) n / 2;
+    center_y = (int) n / 1;
 }
 
 Saliency_map::Saliency_map(double _angular_resolution, double _periphery_radius) : Matrix() {
@@ -115,6 +117,18 @@ void Saliency_map::set_volume(double sigma) {
 //Accessors
 double Saliency_map::get_angular_resolution() {
     return angular_resolution;
+}
+
+int Saliency_map::get_center_x() {
+    return center_x;
+}
+
+int Saliency_map::get_center_y() {
+    return center_y;
+}
+
+int Saliency_map::get_periphery_radius() {
+    return periphery_radius;
 }
 /*
 int Saliency_map::get_n_cues() {

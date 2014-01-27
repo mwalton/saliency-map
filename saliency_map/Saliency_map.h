@@ -20,6 +20,9 @@ private:
     double angular_resolution;
     double periphery_radius;
     
+    int center_x;
+    int center_y;
+    
 public:
     //Constructors
     Saliency_map();
@@ -36,6 +39,9 @@ public:
     //Accessors
     double get_angular_resolution();
     int get_n_cues();
+    int get_center_x();
+    int get_center_y();
+    int get_periphery_radius();
     //double get_volume();
 };
 

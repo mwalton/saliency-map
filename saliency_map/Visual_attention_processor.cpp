@@ -26,6 +26,13 @@ Visual_attention_processor::Visual_attention_processor(double angular_resolution
 
 void Visual_attention_processor::generate_saliency_map(double retinal_scalar, double endogenous_spatial_scalar) {
     saliency = add(retinal_scalar, endogenous_spatial_scalar, retinal, endogenous_spatial);
+    
+    int x = saliency.get_center_x();
+    int y = saliency.get_center_y();
+    
+    int range = saliency.get_periphery_radius();
+    
+    saliency.rectify_range(x, y, range, 0);
     saliency.normalize();
 }
 

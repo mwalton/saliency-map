@@ -36,13 +36,15 @@ public:
     void normalize();
     void normalize(double sum);
     void convolution(Matrix m);
+    void rectify_range(int x, int y, int range, double val);
     
     //Accessors
     unsigned long get_height();
     unsigned long get_width();
     double get_value(size_t x, size_t y);
     double sum();
-    //double approximate_eccentricity(unsigned long,unsigned long);
+    double cartesian_distance(int x_1, int y_1, int x_2, int y_2);
+    
     //void clean();
     
     std::string to_string();
