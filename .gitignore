@@ -131,3 +131,5 @@ xcuserdata
 saliency_map.xcodeproj/project.xcworkspace/xcuserdata/michaelwalton.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.xcuserstate
+
+*.xcbkptlist
