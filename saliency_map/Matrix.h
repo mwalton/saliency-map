@@ -1,6 +1,6 @@
 //
-//  linear_algebra.h
-//  saliency_map
+//  Matrix.h
+//  Attention Classes
 //
 //  Created by Michael Walton on 12/15/13.
 //  Copyright (c) 2013 Michael Walton. All rights reserved.

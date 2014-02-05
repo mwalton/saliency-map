@@ -1,6 +1,6 @@
 //
-//  saliency_map.cpp
-//  saliency_map
+//  Saliency_map.cpp
+//  Attention Classes
 //
 //  Created by Michael Walton on 1/15/14.
 //  Copyright (c) 2014 Michael Walton. All rights reserved.
@@ -68,6 +68,28 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
     //normalize();
 }
 
+void Saliency_map::parafoveal_distribution(double fv, double paraF) {
+    double fovea_sigma = FWHM_constant * fv;
+    double parafovea_sigma = FWHM_constant * paraF;
+    
+    int x_mean = (int)get_width() / 2;
+    int y_mean = (int)get_height() / 2;
+    
+    double fv_A = M_PI * fv * fv;
+    double paraF_A = M_PI * paraF * paraF;
+    
+    Saliency_map fovea = Saliency_map(angular_resolution, periphery_radius);
+    Saliency_map parafovea = Saliency_map(angular_resolution, periphery_radius);
+    
+    fovea.to_gaussian(x_mean, y_mean, fovea_sigma);
+    parafovea.to_gaussian(x_mean, y_mean, parafovea_sigma);
+    
+    linear_combination(fovea, fv_A);
+    linear_combination(parafovea, paraF_A);
+    
+    //normalize();
+}
+
 void Saliency_map::flat_distribution() {
     size_t n = 2 * periphery_radius / angular_resolution;
     resize(n,n,1);
@@ -75,14 +97,20 @@ void Saliency_map::flat_distribution() {
     normalize(sum);
 }
 
-void Saliency_map::insert_gaussian_cue( double size, double intensity, int x_mean, int y_mean ) {
-    double cue_sigma = FWHM_constant * size;
-    double cue_area = M_PI * (size / 2) * (size / 2);
+void Saliency_map::insert_gaussian_cue( GU::Point loc, GU::Size size ) {
+    double h_sz = size.h;
+    double v_sz = size.v;
+    
+    double x_mean = loc.x;
+    double y_mean = loc.y;
+    
+    double cue_sigma = FWHM_constant * h_sz * v_sz;
+    //double cue_area = M_PI * (size / 2) * (size / 2);
     
     Saliency_map cue_map = Saliency_map(angular_resolution, periphery_radius);
     cue_map.to_gaussian(x_mean, y_mean, cue_sigma);
     
-    linear_combination(cue_map, cue_area * intensity);
+    linear_combination(cue_map, 1); // FIXME: Scalar coeff???
 }
 /*
 void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double intensity, unsigned long x, unsigned long y) {

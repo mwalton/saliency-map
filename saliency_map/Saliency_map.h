@@ -1,6 +1,6 @@
 //
-//  saliency_map.h
-//  saliency_map
+//  Saliency_map.h
+//  Attention Classes
 //
 //  Created by Michael Walton on 1/15/14.
 //  Copyright (c) 2014 Michael Walton. All rights reserved.
@@ -10,8 +10,11 @@
 #define SALIENCY_MAP_H
 
 #include <iostream>
-#include "Matrix.h"
+#include <Geometry.h>
+namespace GU = Geometry_Utilities;
 #include <string>
+
+#include "Matrix.h"
 
 class Saliency_map: public Matrix {
 private:
@@ -30,9 +33,10 @@ public:
     
     //Mutators
     void retinal_distribution(double fovea = 1.0, double paraF = 7.5, double perif = 60);
+    void parafoveal_distribution(double fovea = 1.0, double paraF = 7.5);
     void flat_distribution();
     
-    void insert_gaussian_cue(double size, double intensity, int x_mean, int y_mean);
+    void insert_gaussian_cue(GU::Point loc, GU::Size size);
     //void insert_rect_cue(unsigned long, unsigned long, double, unsigned long, unsigned long);
     void set_volume(double);
     
