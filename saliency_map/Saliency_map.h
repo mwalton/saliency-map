@@ -13,6 +13,7 @@
 #include <Geometry.h>
 namespace GU = Geometry_Utilities;
 #include <string>
+#include "Symbol.h"
 
 #include "Matrix.h"
 
@@ -37,6 +38,8 @@ public:
     void flat_distribution();
     
     void insert_gaussian_cue(GU::Point loc, GU::Size size);
+    void insert_regional_cue(double upper_asymptote, const Symbol& region);
+    void insert_rectangular_cue(GU::Point loc, GU::Size size);
     //void insert_rect_cue(unsigned long, unsigned long, double, unsigned long, unsigned long);
     void set_volume(double);
     

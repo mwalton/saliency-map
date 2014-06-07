@@ -9,6 +9,7 @@
 #define _USE_MATH_DEFINES
 
 #include "Saliency_map.h"
+#include "Epic_standard_symbols.h"
 #include <math.h>
 
 /*
@@ -69,25 +70,20 @@ void Saliency_map::retinal_distribution(double fv, double paraF, double perif) {
 }
 
 void Saliency_map::parafoveal_distribution(double fv, double paraF) {
-    double fovea_sigma = FWHM_constant * fv;
     double parafovea_sigma = FWHM_constant * paraF;
     
     int x_mean = (int)get_width() / 2;
     int y_mean = (int)get_height() / 2;
     
-    double fv_A = M_PI * fv * fv;
     double paraF_A = M_PI * paraF * paraF;
     
-    Saliency_map fovea = Saliency_map(angular_resolution, periphery_radius);
     Saliency_map parafovea = Saliency_map(angular_resolution, periphery_radius);
     
-    fovea.to_gaussian(x_mean, y_mean, fovea_sigma);
     parafovea.to_gaussian(x_mean, y_mean, parafovea_sigma);
     
-    linear_combination(fovea, fv_A);
     linear_combination(parafovea, paraF_A);
     
-    //normalize();
+    //normalize(get_max());
 }
 
 void Saliency_map::flat_distribution() {
@@ -112,35 +108,32 @@ void Saliency_map::insert_gaussian_cue( GU::Point loc, GU::Size size ) {
     
     linear_combination(cue_map, 1); // FIXME: Scalar coeff???
 }
-/*
-void Saliency_map::insert_rect_cue(unsigned long w, unsigned long h, double intensity, unsigned long x, unsigned long y) {
-    Saliency_map cue = Saliency_map(angular_resolution);
+
+void Saliency_map::insert_regional_cue(double upper_asymptote, const Symbol& region) {
+    Saliency_map cue_map = Saliency_map(angular_resolution, periphery_radius);
     
-    unsigned long x_max = w + x;
-    unsigned long y_max = h+y;
-    unsigned long sum = w * h;
-    
-    if (x_max > get_n_columns()) x_max = get_n_columns();
-    if (y_max > get_m_rows()) y_max = get_m_rows();
-    
-    for (unsigned long x_i = x; x_i < w; ++x_i) for (unsigned long y_i = y; y_i < y_max; ++y_i) {
-        set(x_i, y_i, get(x_i,y_i) + .01);
+    if (region == Right_c) {
+        cue_map.to_positive_sigmoid(upper_asymptote);
+    } else if (region == Left_c) {
+        cue_map.to_negative_sigmoid(upper_asymptote);
+    } else if (region == Upper_Right_c) {
+        cue_map.to_multivariable_sigmoid(upper_asymptote, 1);
+    } else if (region == Upper_Left_c) {
+        cue_map.to_multivariable_sigmoid(upper_asymptote, 2);
+    } else if (region == Lower_Left_c) {
+        cue_map.to_multivariable_sigmoid(upper_asymptote, 3);
+    } else if (region == Lower_Right_c) {
+        cue_map.to_multivariable_sigmoid(upper_asymptote, 4);
+    } else if (region == Above_c) {
+        cue_map.to_yaxis_sigmoid(upper_asymptote, true);
+    } else if (region == Below_c) {
+        cue_map.to_yaxis_sigmoid(upper_asymptote, false);
+    } else {
+        cue_map.flat_distribution();
     }
     
-    Matrix gauss_kernel = Matrix(3,3);
-    gauss_kernel.to_gaussian(1);
-    
-    cue.normalize(sum);
-    cue.convolution(gauss_kernel);
-    
-    linear_combination(cue, intensity);
+    linear_combination(cue_map, 1); // FIXME: Scalar coeff???
 }
-
-
-void Saliency_map::set_volume(double sigma) {
-    volume = 2 * M_PI * sigma;
-}
-*/
  
 //Accessors
 double Saliency_map::get_angular_resolution() {
@@ -158,13 +151,3 @@ int Saliency_map::get_center_y() {
 int Saliency_map::get_periphery_radius() {
     return periphery_radius;
 }
-/*
-int Saliency_map::get_n_cues() {
-    return n_cues;
-}
-*/
-/*
-double Saliency_map::get_volume() {
-    return volume;
-}
-*/

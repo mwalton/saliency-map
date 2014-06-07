@@ -19,6 +19,7 @@ private:
     size_t width;
     size_t height;
     vector< vector<double> > elements;
+    double max;
     
 public:
     //Constructors
@@ -33,6 +34,12 @@ public:
     void linear_combination(Matrix m, double scalar);
     void scale(double scalar);
     void to_gaussian(int x_mean, int y_mean, double sigma);
+    void to_linear(double m);
+    void to_positive_sigmoid(double upper_asymptote);
+    void to_negative_sigmoid(double upper_asymptote);
+    void to_yaxis_sigmoid(double upper_asymptote, bool positive);
+    void to_multivariable_sigmoid(double upper_asymptote, int quadrant);
+    //void to_rectangle(int x_mean, int y_mean, double sigma);
     void normalize();
     void normalize(double sum);
     void convolution(Matrix m);
@@ -40,8 +47,9 @@ public:
     //Accessors
     unsigned long get_height();
     unsigned long get_width();
-    double get_value(size_t x, size_t y);
+    double get_value(int x, int y);
     double sum();
+    double get_max();
     
     //void clean();
     

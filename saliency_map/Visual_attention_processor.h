@@ -25,17 +25,23 @@ private:
     Saliency_map retinal;
     Saliency_map endogenous_spatial;
     
-    long delay_range = 100;
+    double weight;
+    double delay_deviation_magnitude;
     
     double angular_resolution;
     double periphery_radius;
     int central_coordinate;
     int map_size;
     
+    GU::Point last_known_cue_coordinate;
+    GU::Size last_known_cue_size;
+    
+    bool debug;
+    
 public:
     //Constructors
     Visual_attention_processor();
-    Visual_attention_processor(Symbol overt_dist, double angular_resolution, double periphery_radius);
+    Visual_attention_processor(Symbol overt_dist, double _angular_resolution, double _periphery_radius, double _weight, double _delay_deviation_magnitude, int _debug);
     
     //"pre-constructor" takes param specs and returns a new VAP
     static Visual_attention_processor * create(const Visual_physical_store& physical_store, const Parameter_specification& param_spec);
@@ -43,6 +49,8 @@ public:
     //Mutators
     void generate_saliency_map(double retinal_scalar, double endogenous_spatial_scalar);
     void spatial_cue(Human_processor * const human_ptr, const Symbol& objname);
+    void spatial_cue(Human_processor * const human_ptr);
+    void regional_cue(const Symbol& region);
     void clear_endogenous_spatial();
     
     //Accessors
@@ -52,7 +60,7 @@ public:
     GU::Point get_retinotopic_coordinate(GU::Point eye_loc, GU::Point obj_loc);
     
     long get_delay_range();
-    long delay(Smart_Pointer<Visual_store_object> physobj_ptr,
+    long delay(double min_delay, Smart_Pointer<Visual_store_object> physobj_ptr,
                GU::Point eye_loc, double time_fluctuation);
     
     virtual std::string get_description() const;
@@ -61,8 +69,8 @@ public:
 
 //Symbols
 extern const Symbol Flat_c;
-extern const Symbol Retinal_c;
-extern const Symbol Parafoveal_c;
+extern const Symbol GaussianComplex_c;
+extern const Symbol Gaussian_c;
 
 static Saliency_map add(double scale_n, double scale_m, Saliency_map n, Saliency_map m);
 
